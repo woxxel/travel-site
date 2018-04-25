@@ -13,7 +13,6 @@ gulp.task('watch',function(){
   
   watch('./app/index.html',function(){
     browserSync.reload();
-    done();
   });
   
   watch('./app/assets/styles/**/*.css',function() {
