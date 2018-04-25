@@ -6,14 +6,14 @@ gulp.task('watch',function(){
   
   browserSync.init({
     notify:true,
-//     open:false,
     server: {
-      baseDir: "./app/"
+      baseDir: "app"
     },
   });
   
   watch('./app/index.html',function(){
     browserSync.reload();
+    done();
   });
   
   watch('./app/assets/styles/**/*.css',function() {
