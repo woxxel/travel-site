@@ -1126,10 +1126,15 @@ a {
 @media (min-width: 800px) {
 
 .site-header {
+    position:           fixed;
     background-color: rgba(47,85,114,.3)
   
   
 }
+    
+    .site-header--dark {
+        background-color:   rgba(23, 51, 72, .85);
+    }
   }
 
 @media (min-width: 800px) {
@@ -1149,6 +1154,10 @@ a {
             transform-origin: 50% 0%;
     -webkit-transform:        translateX(-50%) scale(0.8);
             transform:        translateX(-50%) scale(0.8);
+    -webkit-transition:       -webkit-transform .3s ease-out;
+    transition:       -webkit-transform .3s ease-out;
+    transition:       transform .3s ease-out;
+    transition:       transform .3s ease-out, -webkit-transform .3s ease-out;
     
   }
 
@@ -1160,6 +1169,11 @@ a {
               transform:      translateX(0)
     
   }
+      
+      .site-header--dark .site-header__logo {
+          -webkit-transform:    scale(.57);
+                  transform:    scale(.57);
+      }
   }
 
 .site-header__logo__graphic {
@@ -1336,10 +1350,6 @@ a {
     display:          block;
     padding:          5px 8px;
     font-size:        .8rem;
-<<<<<<< HEAD
-/*     background:       #FFF; */
-=======
->>>>>>> reveal-on-scroll
     background-color: rgba(47,85,114, .5);
   }
 
