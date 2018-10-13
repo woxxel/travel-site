@@ -1336,7 +1336,10 @@ a {
     display:          block;
     padding:          5px 8px;
     font-size:        .8rem;
+<<<<<<< HEAD
 /*     background:       #FFF; */
+=======
+>>>>>>> reveal-on-scroll
     background-color: rgba(47,85,114, .5);
   }
 
@@ -1347,4 +1350,18 @@ a {
       font-size:        1rem;
       background-color: transparent
   }
+  }
+
+.reveal-item {
+  opacity:    0;
+  -webkit-transition:   all 1.5s ease-out;
+  transition:   all 1.5s ease-out;
+  -webkit-transform:  scale(1.15);
+          transform:  scale(1.15);
+}
+
+.reveal-item--is-visible {
+    opacity:      1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
